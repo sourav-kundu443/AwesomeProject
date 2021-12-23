@@ -1,20 +1,23 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import React, {Component} from 'react';
+import Cat from './src/components/Cat';
+import CatForm from './src/components/CatForm';
+import ScrollViewCmp from './src/components/ScrollViewCmp';
+import LoginForm from './src/components/LoginForm';
 
-export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
+class App extends Component{
+  render(){
+    return(
+      <>
+      {/* <Cat name="Bob" />
+      <Cat name="Spot" />
+      <CatForm />
+
+      <ScrollViewCmp /> */}
+
+      <LoginForm />
+      </>
+    )
+  }
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+export default App;
